@@ -1,0 +1,10 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TeamSpotlight from "../components/TeamSpotlight";
+---
+
+<Layout title="Team Spotlight Challenge">
+  <main class="bg-gradient-to-b from-sky-100 via-white to-white">
+    <TeamSpotlight client:only="react" />
+  </main>
+</Layout>

@@ -1,11 +1,52 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Frontend Debug Challenge">
+  <main class="mx-auto flex min-h-[80vh] w-full max-w-4xl flex-col gap-10 px-6 py-24">
+    <section class="space-y-6">
+      <h1 class="text-4xl font-bold text-slate-900">
+        Live Debugging Interview
+      </h1>
+      <p class="text-lg text-slate-600">
+        Welcome to the Team Spotlight exercise. During the session you and your interviewer
+        will explore a broken page together, identify issues, and ship fixes without
+        relying on AI assistants.
+      </p>
+    </section>
+
+    <section class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <h2 class="text-2xl font-semibold text-slate-900">What We&apos;ll Do</h2>
+      <ol class="mt-6 list-decimal space-y-4 pl-6 text-base text-slate-600">
+        <li>
+          Ensure dependencies are installed (`npm install`) and spin up the dev server with
+          <code>npm run dev</code> if it&apos;s not already running.
+        </li>
+        <li>
+          Head to <code>/team-spotlight</code>, reproduce the issues, and walk through your
+          debugging approach out loud.
+        </li>
+        <li>
+          Once fixes are in place, recap what changed, how you verified the behaviour, and
+          any follow-up improvements you&apos;d make.
+        </li>
+      </ol>
+      <div class="mt-10 space-y-3">
+        <h3 class="text-lg font-semibold text-slate-900">Issues to Explore</h3>
+        <ul class="space-y-2 text-base text-slate-600">
+          <li>• Team roster stays empty even after the API request resolves.</li>
+          <li>• Team cards show stretched avatars and the contact details sit under the photo instead of sitting beside.</li>
+          <li>• Spotlight carousel doesn&apos;t change the highlighted teammate.</li>
+        </ul>
+      </div>
+      <p class="mt-8">
+        Ready? Start the pairing exercise on
+        <a
+          class="font-semibold text-sky-600 underline decoration-2 underline-offset-4 hover:text-sky-700"
+          href="/team-spotlight"
+          >the Team Spotlight page</a
+        >.
+      </p>
+    </section>
+  </main>
 </Layout>

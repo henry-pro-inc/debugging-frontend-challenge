@@ -1,46 +1,16 @@
-# Astro Starter Kit: Basics
+# Frontend Debug Challenge — Team Spotlight
 
-```sh
-npm create astro@latest -- --template basics
-```
+This repo powers a live debugging interview for junior frontend candidates. During the session, you’ll pair with an interviewer to diagnose and fix three issues in an Astro + React + TypeScript app. Code-generation tools are off-limits; rely on your own reasoning, docs, and the browser devtools.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Session Flow
 
-## 🚀 Project Structure
+1. **Install & start** – Run `npm install` (already done before the session) and `npm run dev` if you want a fresh local copy.
+2. **Explore `/team-spotlight`** – That page contains the broken experience. The interviewer will share a quick walkthrough before you dive in.
+3. **Fix the issues** – Work through the three bugs below, talking through your approach as you go.
+4. **Summarize** – Wrap up with a quick recap of what you found, how you verified each fix, and anything you’d improve with more time.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Bugs to Diagnose
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+1. **API data never appears** – On the `TeamSpotlight` page the roster stays empty even though the request to `https://randomuser.me/api` succeeds.
+2. **Card layout looks off** – Profile photos in `TeamGrid` are stretched and the name/email stack beneath the image instead of sitting beside it.
+3. **Carousel stuck on first person** – The spotlight carousel doesn’t react when the active slide changes, so the highlighted teammate never updates.
